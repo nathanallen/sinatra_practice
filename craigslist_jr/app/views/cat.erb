@@ -1,0 +1,12 @@
+<br><br>
+<div class="container">
+<h2><%= @cat %> for Sale!</h2>
+<a href="/new">Add an Item</a>
+<br>
+<% @post.each do |post| %>
+<hr>
+<b><%=post.title%>:</b><br>
+<p><%=post.description%></p>
+<hr>
+<%end%>
+</div>

@@ -1,0 +1,9 @@
+<br><br>
+<div class="container">
+<h3>Welcome to Craigslist Jr!</h3>
+Categories:
+<br><br>
+<% Category.all.each do |cat| %>
+<a href="/c/<%=cat.name%>"><%=cat.name%></a><br>
+<%end%>
+</div>

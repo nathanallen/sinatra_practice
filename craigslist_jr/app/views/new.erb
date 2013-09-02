@@ -1,0 +1,22 @@
+<br><br>
+<div class="container">
+ <p align='left'> Pick a Category:</p>
+
+<form action='/confirm' method='post'>
+<div align="left">
+<% Category.all.each do |cat| %>
+<input type="radio" name="category" value="<%=cat.name%>"><%=cat.name%><br>
+<%end%>
+<br><br>
+Describe your item:
+<br>
+<input type="text" name="title" value="Title">
+<br>
+<textarea name="description">Desciption</textarea>
+<br><br><br>
+
+<input type="submit">
+<br>
+</div>
+</form>
+</div

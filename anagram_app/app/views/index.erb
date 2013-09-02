@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Anagram Finder</h1>
+
+  <form action="/" method="get">
+  <% if @input == nil %>
+    Find an anagram:
+  <% else %> 
+    Find another anagram:
+  <% end %>
+
+    <br>
+    <input type="text" name="input">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+  <% unless @input == nil %>
+  <div class="container">
+    Here are all the anagrams for <%= @input.to_s %>:
+  <ul><% if @anagrams %>
+    <% @anagrams.each do |w| %>
+    <li><%= w %></li>
+    <% end %>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
